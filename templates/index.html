@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Face Recognition System</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        form {
+            max-width: 400px;
+            margin: 20px auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        input[type="text"], button {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        button {
+            background-color: #28a745;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Face Recognition System</h1>
+
+<!-- Data Collection Form -->
+<form action="/data_collection" method="post">
+    <label for="person_name">Enter Person's Name:</label>
+    <input type="text" id="person_name" name="person_name" required>
+    <button type="submit">Collect Data</button>
+</form>
+
+<!-- Model Training Form -->
+<form action="/train_model" method="post">
+    <button type="submit">Train Model</button>
+</form>
+
+<!-- Real-Time Recognition Form -->
+<form action="/recognize" method="post">
+    <button type="submit">Start Real-Time Recognition</button>
+</form>
+
+</body>
+</html>
